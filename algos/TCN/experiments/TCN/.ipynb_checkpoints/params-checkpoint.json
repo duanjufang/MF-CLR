@@ -1,0 +1,12 @@
+{
+    "learning_rate": 1e-3,
+    "batch_size": 64,
+    "num_inputs": 7,
+    "kernel_size": 7,
+    "num_channels": [32, 32, 32, 32, 32, 1],
+    "num_epochs": 200,
+    "num_class": 243,
+    "cov_dim": 6,
+    "tcn_dropout": 0.2,
+    "predict_batch": 256
+}

@@ -1,0 +1,21 @@
+The author (Sana) unfortunately did not export the `environment.yml` correctly, I believe. This results in cross-system
+incompatibility when building from the file. I have commented out the non-pip-installed packages and added just the
+essential requirements with correction versions for python, scipy, numpy, and pip, so the remaining packages can be
+installed via pip. I hope this can allow others to build on different systems without issue. To document, I'm using
+macOS Monterey.
+
+I added a requirement for timesynth (https://pypi.org/project/timesynth/) package to the pip dependencies list. Fixed
+imports for timesynth in the author's code.
+
+MIT-BIH Atrial Fibrillation dataset: https://physionet.org/static/published-projects/afdb/mit-bih-atrial-fibrillation-database-1.0.0.zip
+After unzipping, rename the folder to `raw` and put it in a folder called `waveform_data` under the data folder. Then
+run `afib_data.py` to process. Fixed problem with pickle trying to save a preprocessed file that is too large in the
+`afib_data.py`.
+
+Run `python -m tnc.tnc --data waveform --train` to train for the atrial fibrillation dataset (also called "waveform"
+by the authors).
+
+Device set to `cpu` to debug the weird bug that another user had encountered, regarding fork & exec. Well, where's that
+multiprocessing code? Okay, I understand it now. The author was using num_workers=3 when making the dataloader to...
+speed up dataloading. But obviously that kind of multiprocessing is funky in the current mac os environment, so I
+took that out!
