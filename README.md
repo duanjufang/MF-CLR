@@ -71,6 +71,19 @@ The detailed descriptions about the arguments are as following:
 
 (For descriptions of more arguments, see `EXP_FCST_PUBLIC_DATASETS.py`.)
 
+## Citation
+
+If you find this repo useful, please cite our paper.
+```
+@inproceedings{
+duan2024mfclr,
+title={{MF}-{CLR}: Multi-Frequency Contrastive Learning Representation for Time Series},
+author={Jufang Duan and Wei Zheng and Yangzhou Du and Wenfa Wu and Haipeng Jiang and Hongsheng Qi},
+booktitle={Forty-first International Conference on Machine Learning},
+year={2024},
+url={https://openreview.net/forum?id=ecO7WOIlMD}
+}
+```
 
 ## Baseline
 
